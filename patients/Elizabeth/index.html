@@ -298,53 +298,58 @@
             font-weight: bold;
         }
         
-        .footer {
-            background: #f8f9fa;
-            padding: 25px 40px;
+        /* CTA SECTION (added) */
+        .cta-section {
+            background: #eef2ff;
+            padding: 40px;
             text-align: center;
             border-top: 3px solid #667eea;
-            font-size: 13px;
-            color: #666;
+            margin-top: 40px;
         }
-        
-        .button {
+
+        .cta-section h2 {
+            font-size: 24px;
+            color: #667eea;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .cta-section p {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .cta-button {
             background: #667eea;
             color: white;
             padding: 15px 30px;
             border: none;
-            border-radius: 8px;
-            font-size: 16px;
+            border-radius: 10px;
+            font-size: 18px;
             font-weight: 600;
             cursor: pointer;
-            margin: 20px auto;
-            display: block;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
             box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
         }
-        
-        .button:hover {
+
+        .cta-button:hover {
             background: #5568d3;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
         }
-        
+
         @media print {
-            body {
-                background: white;
-                padding: 0;
-            }
-            
-            .container {
-                box-shadow: none;
-            }
-            
-            .button {
-                display: none;
-            }
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; }
+            .button, .cta-button { display: none; }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
+
         <div class="header">
             <h1>6-Month Weight Management Plan</h1>
             <p>Personalized Calorie & Nutrition Guide</p>
@@ -383,7 +388,9 @@
                 <h2>Daily Calorie Goal</h2>
                 <div class="big-number">1,350</div>
                 <p style="font-size: 16px;">kcal per day</p>
-                <p style="font-size: 14px; margin-top: 15px; opacity: 0.9;">This creates a 500 kcal daily deficit for safe, sustainable weight loss of 0.5 kg per week</p>
+                <p style="font-size: 14px; margin-top: 15px; opacity: 0.9;">
+                    This creates a 500 kcal daily deficit for safe, sustainable weight loss of 0.5 kg per week
+                </p>
             </div>
         </div>
         
@@ -521,8 +528,21 @@
                 </div>
             </div>
         </div>
+
         
-       
+        <!-- ⭐ CTA SECTION ADDED ⭐ -->
+        <div class="cta-section">
+            <h2>Next Steps in Your Weight Management Journey</h2>
+
+            <p>✔ <strong>4-week check-in:</strong> Review progress and adjust if needed</p>
+            <p>✔ <strong>3-month check-in:</strong> Progress assessment & medication review</p>
+
+            <p style="margin-top: 20px;">Book your follow-up appointments online:</p>
+
+            <a href="https://www.novabodymedical.com.au" class="cta-button" target="_blank">
+                www.novabodymedical.com.au
+            </a>
+        </div>
         
         <button class="button" onclick="window.print()">🖨️ Print or Save as PDF</button>
     </div>
